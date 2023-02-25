@@ -1,0 +1,271 @@
+/* start globle rules */
+
+:root{
+    --heading-color: hsl(210, 10%, 33%);
+    --p-color: hsl(201, 11%, 66%);
+    --button-1-color:hsl(171, 66%, 44%);
+      --button-2-color:hsl(233, 100%, 69%);
+      --line-height:1.7;
+      --transition:0.3s;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+ 
+    font-size: 18px;
+}
+
+/* small  */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* meduim  */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* large  */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-head h2{
+    color: var(--heading-color);
+}
+/* end globle rules */
+
+
+/* start header */
+ header .container {
+    height: 21rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+ }
+header{
+      background-image: url(../images/bg-header-desktop.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+/* end header */
+section {
+
+  margin-bottom: 7rem;
+}
+.intro .container{
+        display: flex;
+    flex-direction: column;
+}
+.section-head{
+text-align: center;
+}
+
+.section-head h1 {
+    color: var(--heading-color);
+    margin-top: -1.5rem;
+    font-size: 2rem;
+}
+.section-head p{
+    color: var(--p-color);
+    width: 100%;
+    line-height: var(--line-height);
+}
+ .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2em;
+ 
+}
+@media(max-width:600px){
+     .btn{
+        flex-direction: column;
+    }
+}
+.btn button{
+    height: 2.5rem;
+    width: 13rem;
+    border: none;
+    color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 1px 2px 3px 0 var(--p-color);
+    opacity: 1;
+    transition: var(--transition);
+}
+.btn button:hover{
+    opacity: 0.9;
+}
+.btn button:first-child{
+    background-color: var(--button-1-color);
+}
+.btn button:nth-child(2){
+    background-color: var(--button-2-color);
+}
+ 
+/* end intro */
+/* start section one */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+@media(max-width:767px){
+    section.one nav{
+        flex-direction: column;
+    }
+}
+.one nav .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav img{
+    width: 100%;
+}
+.one nav .info{
+    padding: 0 4rem;
+}
+@media(max-width:767px){
+    .one nav .info{
+        text-align: center;
+    } 
+    .one nav .image{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .one nav img {
+        margin-left:  1rem;
+        margin-right: 1rem;
+    }
+    .one nav .info{
+        padding: 0;
+      
+    }
+    .one nav .info p{
+        margin: 0 2rem;
+    }
+    
+}
+
+.one nav .info .head {
+    margin: 4rem 0;
+}
+.one nav .info h3{
+color: var(--heading-color);
+margin: 1rem 0;
+}
+.one nav .info p{
+color: var(--p-color);
+
+line-height: var(--line-height);
+
+}
+/*  start section two */
+.two .image{
+    margin-top: 3rem;
+}
+.two .image img{
+    width: 100%;
+}
+/* ind section two */
+
+/* start section three */
+
+.three .features{
+    margin: 6.25rem 0 ;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(18.75rem , 1fr));
+    gap: 2rem;
+}
+
+.three .features .box{
+    text-align: center;
+}
+
+.three .features .box h3{
+color: var(--heading-color);
+}
+
+.three .features .box p{
+color: var(--p-color);
+line-height: var(--line-height);
+}
+
+
+.three .company{
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(12.5rem , 1fr));
+   
+}
+.three .company img{
+    margin: 2rem;
+}
+
+@media(max-width:767px){
+    .three .company img{
+        margin: 3.125rem auto;
+    }  
+}
+
+/* end section three */
+
+/* start footer */
+footer{
+    background-color:#f5f6f8;
+
+}
+footer .container{
+    padding: 1.5rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: var(--heading-color);
+}
+@media(max-width:767px){
+    footer .container{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+footer .social{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+footer .f-logo{
+    width: 6.25rem;
+    margin: 2rem 0;
+}
+footer .social img , footer div p{
+    transition: var(--transition);
+    cursor: pointer;
+    
+}
+footer div p:hover {
+    color: var(--button-1-color);
+}
+
+footer .social img:hover{
+color: var(--button-1-color);
+
+}
+/* end footer */
